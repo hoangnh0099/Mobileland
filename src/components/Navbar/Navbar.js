@@ -21,7 +21,6 @@ class Navbar extends Component {
           <nav>
             <NavLink to="/" exact activeClassName="active">Home</NavLink>
             <NavLink to="/products/" exact activeClassName="active">Products</NavLink>
-            <NavLink to="/news" exact activeClassName="active">News</NavLink>
             <NavLink to="/about" exact activeClassName="active">About</NavLink>
           </nav>
         </div>

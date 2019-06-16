@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './Home.css';
 import firebase from './../../FirebaseConfig';
 import Slider from "react-slick";
-
+import { Link } from 'react-router-dom';
 
 class Home extends Component {
   constructor() {
@@ -48,6 +48,8 @@ class Home extends Component {
       autoplay: true,
       autoplaySpeed: 2000,
     };
+
+    console.log(this.props);
     return (
       <div className="Home">
         <h1>Home</h1>
@@ -70,7 +72,9 @@ class Home extends Component {
             this.state.products.map((product, index) => {
               return (
                 <div key={index} className="product">
-                  <img src={product.thumbnail} alt="" />
+                  <Link to={this.props.match.path + "products/" + product.id}>
+                    <img src={product.thumbnail} alt="" />
+                  </Link>
                   <div className="product-title">
                     <p>{product.name}</p>
                   </div>
