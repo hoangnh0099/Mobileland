@@ -6,6 +6,8 @@ import { BrowserRouter, Route, NavLink, Switch, Link } from 'react-router-dom';
 import Home from './../Home/Home';
 import Products from './../Products/Products';
 import ProductDetail from '../ProductDetail/ProductDetail';
+import Admin from '../Admin/Admin';
+import Login from '../Login/Login';
 
 class Navbar extends Component {
   render() {
@@ -28,6 +30,8 @@ class Navbar extends Component {
           <Route path="/" exact component={Home} />
           <Route path="/products" exact component={Products} />
           <Route path="/products/:id" exact component={ProductDetail} />
+          <Route path="/admin" exact component={Login} />
+          <Route path="/admin/administrator" exact component={Admin} />
         </Switch>
       </BrowserRouter>
     )

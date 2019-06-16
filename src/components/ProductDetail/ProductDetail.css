@@ -4,3 +4,50 @@
   height: 100vh;
   overflow: auto;
 }
+
+.detail {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  height: 400px;
+  box-shadow: 5px 5px 15px #ccc;
+  border-radius: 20px;
+}
+
+.detail img {
+  width: 40%;
+  border-radius: 20px 0px 0px 20px;
+}
+
+.detail .information {
+  width: 60%;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+}
+
+.information form {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail .information form input {
+  background: #efefef;
+  height: 40px;
+  border-radius: 20px;
+  outline: none;
+  padding-left: 20px;
+  font-size: 20px;
+  margin: 10px 0px;
+}
+
+.detail .information form button {
+  background: red;
+  height: 40px;
+  border-radius: 20px;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+  outline: none;
+}

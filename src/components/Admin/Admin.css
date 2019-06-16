@@ -1,0 +1,160 @@
+.Admin {
+  flex: 5;
+  height: 100vh;
+  overflow: auto;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.add-news,
+.add-product {
+  height: 100vh;
+  border-bottom: 1px solid #ccc;
+}
+
+.add-news form,
+.add-product form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin: 5% auto;
+  background: white;
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 15px #ccc;
+  margin-left: 50px;
+}
+
+.add-news form input,
+.add-product form input {
+  background: #efefef;
+  height: 50px;
+  border-radius: 20px;
+  padding-left: 20px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  outline: none;
+}
+
+.add-news form textarea {
+  background: #efefef;
+  height: 200px;
+  padding-left: 20px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  outline: none;
+}
+
+
+.add-news form button,
+.add-product form button {
+  height: 50px;
+  border-radius: 20px;
+  background: red;
+  font-size: 20px;
+  color: white;
+  outline: none;
+  cursor: pointer;
+}
+
+.add-news form h1,
+.add-product form h1 {
+  text-align: left !important;
+  margin-bottom: 20px;
+}
+
+.manage-news,
+.manage-product,
+.manage-order {
+  margin-top: 10%;
+  height: 100vh;
+  border-bottom: 1px solid #ccc;
+}
+
+.manage-news table,
+.manage-product table {
+  /* width: 70%; */
+  /* margin: 0 auto; */
+  width: 69%;
+  margin-left: 50px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 5px 5px 15px #ccc;
+  padding: 50px;
+}
+
+.manage-order table {
+  /* width: 70%;
+  margin: 0 auto; */
+  width: 70%;
+  margin-left: 50px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 5px 5px 15px #ccc;
+  padding: 50px;
+}
+
+.manage-news table thead,
+.manage-product table thead {
+ font-weight: bold;
+ font-size: 20px;
+}
+
+.manage-news table tr td,
+.manage-product table tr td,
+.manage-order table tr td {
+  border-bottom: 1px solid #ccc;
+  height: 50px;
+  padding: 10px;
+}
+
+.manage-news table tr td button,
+.manage-product table tr td button,
+.manage-order table tr td button {
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+  background: none;
+  outline: none;
+}
+
+.sign-out-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 20px;
+  position: fixed;
+  bottom: 100px;
+  right: 75px;
+  cursor: pointer;
+  outline: none;
+  background: red;
+  color: white;
+}
+
+.menu {
+  top: 25%;
+  right: 0px;
+  position: fixed;
+  background: none;
+}
+
+.menu ul  {
+  background: white;
+  padding: 20px;
+  box-shadow: 5px 5px 15px #ccc;
+  border-radius: 20px 0px 0px 20px;
+}
+
+.menu ul li {
+  list-style: none;
+  height: 50px;
+  line-height: 50px;
+}
+
+.menu ul li a {
+  color: black;
+  display: block;
+}

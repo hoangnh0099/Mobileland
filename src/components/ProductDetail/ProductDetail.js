@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
 import './ProductDetail.css';
 import firebase from './../../FirebaseConfig';
+import ProductDetailComponent from '../ProductDetailComponent/ProductDetailComponent';
 
 class ProductDetail extends Component {
   constructor() {
     super();
     this.state = {
-      products: []
+      products: [],
+      name: "",
+      email: "",
+      address: "",
+      phone: ""
     }
   }
 
@@ -27,6 +32,31 @@ class ProductDetail extends Component {
     })
   }
 
+  onSubmit = (event) => {
+    event.preventDefault();
+    alert("Đặt hàng thành công");
+    const database = firebase.firestore();
+    database.collection("order").add({
+      name: this.state.name,
+      phone: this.state.phone,
+      address: this.state.address,
+      email: this.state.email,
+      amount: "1",
+    })
+    this.setState({
+      name: "",
+      phone: "",
+      address: "",
+      email: ""
+    })
+  }
+
+  onChange = (event) => {
+    this.setState({
+      [event.target.name]: event.target.value
+    })
+  }
+
   render() {
     const paramsID = this.props.match.params.id;
     return (
@@ -35,9 +65,12 @@ class ProductDetail extends Component {
           this.state.products.map((product, index) => {
             if (paramsID === product.id) {
               return (
-                <div key={index}>
-                  <h1>ProductDetail Component</h1>
-                </div>
+                <ProductDetailComponent
+                  key={index}
+                  name={product.name}
+                  thumbnail={product.thumbnail}
+                  price={product.price}
+                  />
               )
             }
           })
