@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import './Products.css';
+import './ProductDetail.css';
 import firebase from './../../FirebaseConfig';
-import { Link } from 'react-router-dom';
 
-class Products extends Component {
+class ProductDetail extends Component {
   constructor() {
     super();
     this.state = {
@@ -29,29 +28,23 @@ class Products extends Component {
   }
 
   render() {
+    const paramsID = this.props.match.params.id;
     return (
-      <div className="Products">
-        <h1>Products</h1>
-        <div className="card-area">
-          {
-            this.state.products.map((product, index) => {
+      <div className="ProductDetail">
+        {
+          this.state.products.map((product, index) => {
+            if (paramsID === product.id) {
               return (
-                <div className="card" key={index}>
-                  <Link to={this.props.match.path + "/" + product.id}>
-                    <img src={product.thumbnail} alt={product.name} />
-                  </Link>
-                  <div className="product-info">
-                    <h4>{product.name}</h4>
-                    <p>{product.price}</p>
-                  </div>
+                <div key={index}>
+                  <h1>ProductDetail Component</h1>
                 </div>
               )
-            })
-          }
-        </div>
+            }
+          })
+        }
       </div>
-    );
+    )
   }
 }
 
-export default Products;
+export default ProductDetail;

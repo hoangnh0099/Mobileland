@@ -1,0 +1,6 @@
+.ProductDetail {
+  flex: 5;
+  padding: 50px;
+  height: 100vh;
+  overflow: auto;
+}

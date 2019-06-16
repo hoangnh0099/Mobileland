@@ -4,6 +4,8 @@ import { BrowserRouter, Route, NavLink, Switch, Link } from 'react-router-dom';
 
 // Component
 import Home from './../Home/Home';
+import Products from './../Products/Products';
+import ProductDetail from '../ProductDetail/ProductDetail';
 
 class Navbar extends Component {
   render() {
@@ -23,7 +25,9 @@ class Navbar extends Component {
         </div>
         
         <Switch>
-          <Route path="/" component={Home} />
+          <Route path="/" exact component={Home} />
+          <Route path="/products" exact component={Products} />
+          <Route path="/products/:id" exact component={ProductDetail} />
         </Switch>
       </BrowserRouter>
     )
